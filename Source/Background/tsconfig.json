@@ -1,0 +1,16 @@
+{
+    "extends" : "../tsconfig.json" ,
+
+    "compilerOptions" : {
+
+        "lib" : [ "DOM" , "ESNext" ] ,
+
+        "baseUrl" : "../.."
+    },
+
+    "include" : [
+        "../Shopify/**.ts" ,
+        "../Types/**.ts" ,
+        "**/*.ts"
+    ]
+}

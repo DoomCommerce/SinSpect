@@ -1,0 +1,24 @@
+{
+    "compilerOptions" : {
+
+        "noPropertyAccessFromIndexSignature" : true ,
+        "forceConsistentCasingInFileNames" : true ,
+        "allowSyntheticDefaultImports" : true ,
+        "allowImportingTsExtensions" : true ,
+        "noFallthroughCasesInSwitch" : true ,
+        "verbatimModuleSyntax" : true ,
+        "noUnusedParameters" : true ,
+        "downlevelIteration" : true ,
+        "noUnusedLocals" : true ,
+        "skipLibCheck" : true ,
+        "composite" : true ,
+        "allowJs" : true ,
+        "strict" : true ,
+        "noEmit" : true ,
+
+        "moduleResolution" : "Bundler" ,
+        "moduleDetection" : "force" ,
+        "module" : "ESNext" ,
+        "target" : "ES2024"
+    }
+}
