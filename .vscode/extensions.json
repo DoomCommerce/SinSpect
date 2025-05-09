@@ -1,0 +1,11 @@
+{
+    "recommendations" : [
+        "cezaraugusto.vscode-chrome-extesion-manifest-json-schema" ,
+        "streetsidesoftware.code-spell-checker" ,
+        "codeandstuff.package-json-upgrade" ,
+        "vscode-icons-team.vscode-icons" ,
+        "EditorConfig.EditorConfig" ,
+        "YoavBls.pretty-ts-errors" ,
+        "syler.ignore"
+    ]
+}
