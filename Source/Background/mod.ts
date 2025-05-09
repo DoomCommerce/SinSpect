@@ -87,11 +87,29 @@ async function updateIsPreview (
 
     const isPreview = cookie?.value === '1'
 
-    console.debug('Cookie',cookie)
-
     sidepanel_port?.postMessage({
         content : {
             IsPreview : isPreview
         }
     })
 }
+
+
+chrome.runtime.onMessage.addListener((
+    message , sender , reply
+) => {
+
+    console.debug('onMessage',{ message , sender })
+
+    if( message.type !== 'Theme Data' )
+        return
+
+
+    sidepanel_port?.postMessage({
+        content : {
+            Theme : {
+                Name : message.data.name as string
+            }
+        }
+    })
+})

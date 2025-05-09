@@ -13,7 +13,8 @@
         "scripting" ,
         "sidePanel" ,
         "storage" ,
-        "cookies"
+        "cookies" ,
+        "webRequest"
     ],
 
     "side_panel" : {
@@ -32,13 +33,27 @@
 
         "all_frames" : false ,
         "run_at" : "document_start" ,
+        "world" : "ISOLATED" ,
 
         "matches" : [ 
             "https://*/*" 
         ],
 
         "js" : [
-            "Scripts/Content.js"
+            "Scripts/Content-Isolated.js"
+        ]
+    },{
+
+        "all_frames" : false ,
+        "run_at" : "document_start" ,
+        "world" : "MAIN" ,
+
+        "matches" : [ 
+            "https://*/*" 
+        ],
+
+        "js" : [
+            "Scripts/Content-Shared.js"
         ]
     }],
 

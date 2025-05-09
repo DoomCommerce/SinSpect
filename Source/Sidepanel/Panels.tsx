@@ -14,7 +14,7 @@ type PageType = ( typeof Pages )[ number ]
 
 function Panels (){
 
-    const { setPreview } = useStore()
+    const { setPreview , setTheme } = useStore()
 
     useEffect(() => {
 
@@ -22,14 +22,19 @@ function Panels (){
             name : 'Sidepanel Channel'
         })
     
-        console.debug('Port',port)
+        console.debug('Sidepanel::Port',port)
     
         port.onMessage.addListener( async (
             message , port
         ) => {
-            console.debug('OnMessage',{ message , port })
 
-            setPreview(message.content.IsPreview)
+            console.debug('Sidepanel::onMessage',{ message , port })
+
+            if( 'IsPreview' in message.content )
+                setPreview(message.content.IsPreview)
+
+            if( 'Theme' in message.content )
+                setTheme({ name : message.content.Theme.Name })
         })
 
     },[])
