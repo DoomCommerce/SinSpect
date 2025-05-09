@@ -1,0 +1,15 @@
+{
+    /*
+     *  There doesn't seem to be any schema for managed storage ,
+     *  closest equivalent should be the 07 meta schema.
+     */
+
+    "$schema": "http://json-schema.org/draft-07/schema" ,
+
+
+    "type" : "object" ,
+
+    "properties" : {
+
+    }
+}

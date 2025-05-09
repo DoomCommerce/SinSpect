@@ -1,0 +1,33 @@
+
+* , ::before , ::after {
+    box-sizing : border-box ;
+}
+
+* {
+    padding : 0 ;
+    margin : 0 ;
+    font : inherit ;
+}
+
+html {
+    hanging-punctuation : first last ;
+    color-scheme : dark light ;
+}
+
+body {
+    min-height : 100svh ;
+}
+
+picture , video , img , svg {
+    max-width : 100% ;
+    display : block ;
+}
+
+h1 , h2 , h3 , h4 , h5 , h6 {
+    text-wrap : balance ;
+}
+
+li , p {
+    text-wrap : pretty ;
+    max-width : 65ch ;
+}

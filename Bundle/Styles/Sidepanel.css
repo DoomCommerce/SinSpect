@@ -1,0 +1,63 @@
+
+
+html {
+    background : darkslategrey ;
+}
+
+body {
+    padding : 1rem ;
+}
+
+.Panels {
+
+    flex-direction : column ;
+    display : flex ;
+    gap : 1rem ;
+
+    nav {
+
+        grid-template-columns : repeat( auto-fit , minmax( 100px , 1fr ) ) ;
+        column-gap : 1rem ;
+        display : grid ;
+
+        > div {
+
+            border-radius : 1rem ;
+            background : white ;
+            padding : 0.5rem 1rem ;
+
+            font-weight : bold ;
+            text-align : center ;
+            color : black ;
+
+            cursor : pointer ;
+        }
+    }
+}
+
+
+.Infos {
+
+    list-style : none ;
+
+    flex-direction : column ;
+    display : flex ;
+    gap : 0.5rem ;
+
+    > li {
+
+        border-radius : 0.75rem ;
+        border : 2px solid white ;
+
+        padding : 1rem ;
+
+        &:hover {
+            background : #FFFFFF22 ;
+        }
+
+        > h3 {
+            font-weight : bold ;
+        }
+    }
+}
+

@@ -1,0 +1,11 @@
+{
+    "Meta_Name" : {
+        "description" : "Name of the extension" ,
+        "message" : "SinSpect"
+    },
+
+    "Meta_Name_Short" : {
+        "description" : "Short name of the extension" ,
+        "message" : "Sins"
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "$schema" : "https://json.schemastore.org/chrome-manifest" ,
+
+    "minimum_chrome_version" : "134" ,
+    "version" : "0.0.1" ,
+
+    "host_permissions" : [
+        "https://*/*"
+    ],
+
+    "permissions" : [
+        "management" ,
+        "scripting" ,
+        "sidePanel" ,
+        "storage" ,
+        "cookies"
+    ],
+
+    "side_panel" : {
+        "default_path" : "Pages/Sidebar.html"
+    },
+
+    "background" : {
+        "service_worker" : "Scripts/Background.js"
+    },
+
+    "storage" : {
+        "managed_schema" : "Assets/Storage.json"
+    },
+
+    "content_scripts" : [{
+
+        "all_frames" : false ,
+        "run_at" : "document_start" ,
+
+        "matches" : [ 
+            "https://*/*" 
+        ],
+
+        "js" : [
+            "Scripts/Content.js"
+        ]
+    }],
+
+    "action" : {
+
+        "default_title" : "__MSG_Meta_Name__" ,
+        "default_popup" : "Pages/Popup.html" ,
+
+        "default_icon" : {
+            "32" : "Assets/Icons/Extension/32.png" ,
+            "24" : "Assets/Icons/Extension/24.png" ,
+            "16" : "Assets/Icons/Extension/16.png"
+        }
+    },
+
+    "icons" : {
+        "128" : "Assets/Icons/Extension/128.png" ,
+        "64" : "Assets/Icons/Extension/64.png" ,
+        "32" : "Assets/Icons/Extension/32.png" ,
+        "16" : "Assets/Icons/Extension/16.png"
+    },
+
+    "default_locale" : "en" ,
+    "short_name" : "__MSG_Meta_Name_Short__" ,
+    "name" : "__MSG_Meta_Name__" ,
+
+    "manifest_version" : 3
+}
